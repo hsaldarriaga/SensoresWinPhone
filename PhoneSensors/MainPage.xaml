@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="PhoneSensors.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PhoneSensors"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="DarkSeaGreen">
+
+    <StackPanel x:Name="gridParent" Margin="10">
+        <TextBlock FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}">Sensores</TextBlock>
+        <StackPanel>
+            <TextBlock FontSize="{StaticResource TextStyleMediumFontSize}">Seleccionar Sensor</TextBlock>
+            <ComboBox x:Name="comboSelector">
+                <ComboBoxItem Content="Accelerometer" IsSelected="True"/>
+                <ComboBoxItem Content="Inclinometer"/>
+                <ComboBoxItem Content="Gyrometer"/>
+                <ComboBoxItem Content="Compass"/>
+                <ComboBoxItem Content="LightSensor"/>
+            </ComboBox>
+        </StackPanel>
+        <StackPanel>
+            <Rectangle x:Name="r1" Height="20" Fill="DarkCyan" HorizontalAlignment="Left" Width="100"></Rectangle>
+            <Rectangle x:Name="r2" Height="20" Fill="DarkGoldenrod" HorizontalAlignment="Left" Width="100"></Rectangle>
+            <Rectangle x:Name="r3" Height="20" Fill="DarkGray" HorizontalAlignment="Left" Width="100"></Rectangle>
+            <StackPanel.Resources>
+                <Style TargetType="Rectangle">
+                    <Setter Property="Margin" Value="0,0,0,20" />
+                </Style>
+            </StackPanel.Resources>
+        </StackPanel>
+    </StackPanel>
+</Page>
